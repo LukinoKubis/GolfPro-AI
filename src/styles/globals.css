@@ -1,0 +1,257 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  /* Improved Light theme - softer, more pleasant colors */
+  --background: oklch(0.97 0.005 264);
+  --foreground: oklch(0.15 0.01 264);
+  --card: oklch(0.99 0.003 264);
+  --card-foreground: oklch(0.15 0.01 264);
+  --popover: oklch(0.99 0.003 264);
+  --popover-foreground: oklch(0.15 0.01 264);
+  --primary: oklch(0.45 0.20 264);
+  --primary-foreground: oklch(0.98 0.01 264);
+  --secondary: oklch(0.96 0.01 264);
+  --secondary-foreground: oklch(0.25 0.02 264);
+  --muted: oklch(0.95 0.005 264);
+  --muted-foreground: oklch(0.50 0.01 264);
+  --accent: oklch(0.55 0.15 285);
+  --accent-foreground: oklch(0.98 0.01 264);
+  --destructive: oklch(0.60 0.20 15);
+  --destructive-foreground: oklch(0.98 0.01 264);
+  --border: oklch(0.90 0.01 264);
+  --input: oklch(0.96 0.01 264);
+  --input-background: oklch(0.98 0.005 264);
+  --switch-background: oklch(0.92 0.01 264);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.45 0.20 264);
+  --chart-1: oklch(0.45 0.20 264);
+  --chart-2: oklch(0.55 0.15 285);
+  --chart-3: oklch(0.65 0.12 305);
+  --chart-4: oklch(0.35 0.12 245);
+  --chart-5: oklch(0.25 0.08 225);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.98 0.005 264);
+  --sidebar-foreground: oklch(0.15 0.01 264);
+  --sidebar-primary: oklch(0.45 0.20 264);
+  --sidebar-primary-foreground: oklch(0.98 0.01 264);
+  --sidebar-accent: oklch(0.95 0.005 264);
+  --sidebar-accent-foreground: oklch(0.25 0.02 264);
+  --sidebar-border: oklch(0.90 0.01 264);
+  --sidebar-ring: oklch(0.45 0.20 264);
+  
+  /* Golf-specific colors - softer for light mode */
+  --golf-green: oklch(0.60 0.12 140);
+  --golf-fairway: oklch(0.65 0.10 120);
+  --golf-rough: oklch(0.50 0.06 100);
+  --golf-sand: oklch(0.75 0.12 60);
+  --golf-water: oklch(0.55 0.12 220);
+}
+
+/* Dark theme overrides */
+.dark {
+  --background: oklch(0.08 0.01 264);
+  --foreground: oklch(0.95 0.01 264);
+  --card: oklch(0.12 0.02 264);
+  --card-foreground: oklch(0.95 0.01 264);
+  --popover: oklch(0.12 0.02 264);
+  --popover-foreground: oklch(0.95 0.01 264);
+  --primary: oklch(0.65 0.25 264);
+  --primary-foreground: oklch(0.95 0.01 264);
+  --secondary: oklch(0.18 0.03 264);
+  --secondary-foreground: oklch(0.85 0.02 264);
+  --muted: oklch(0.16 0.02 264);
+  --muted-foreground: oklch(0.65 0.02 264);
+  --accent: oklch(0.55 0.20 285);
+  --accent-foreground: oklch(0.95 0.01 264);
+  --destructive: oklch(0.55 0.25 15);
+  --destructive-foreground: oklch(0.95 0.01 264);
+  --border: oklch(0.22 0.03 264);
+  --input: oklch(0.18 0.03 264);
+  --input-background: oklch(0.16 0.02 264);
+  --switch-background: oklch(0.25 0.03 264);
+  --ring: oklch(0.65 0.25 264);
+  --chart-1: oklch(0.65 0.25 264);
+  --chart-2: oklch(0.55 0.20 285);
+  --chart-3: oklch(0.45 0.15 305);
+  --chart-4: oklch(0.75 0.15 245);
+  --chart-5: oklch(0.85 0.10 225);
+  --sidebar: oklch(0.10 0.02 264);
+  --sidebar-foreground: oklch(0.95 0.01 264);
+  --sidebar-primary: oklch(0.65 0.25 264);
+  --sidebar-primary-foreground: oklch(0.95 0.01 264);
+  --sidebar-accent: oklch(0.16 0.02 264);
+  --sidebar-accent-foreground: oklch(0.85 0.02 264);
+  --sidebar-border: oklch(0.22 0.03 264);
+  --sidebar-ring: oklch(0.65 0.25 264);
+  
+  /* Golf-specific colors for dark theme */
+  --golf-green: oklch(0.45 0.15 140);
+  --golf-fairway: oklch(0.50 0.12 120);
+  --golf-rough: oklch(0.35 0.08 100);
+  --golf-sand: oklch(0.60 0.15 60);
+  --golf-water: oklch(0.40 0.15 220);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Golf colors */
+  --color-golf-green: var(--golf-green);
+  --color-golf-fairway: var(--golf-fairway);
+  --color-golf-rough: var(--golf-rough);
+  --color-golf-sand: var(--golf-sand);
+  --color-golf-water: var(--golf-water);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in oklch, var(--ring), transparent 50%);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+  
+  /* Hide scrollbars completely but keep functionality */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+  
+  /* Ensure scroll functionality still works */
+  .scroll-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .scroll-horizontal {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+/**
+ * Base typography with enhanced styling for both themes
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      color: var(--foreground);
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+  }
+}
+
+/* Custom gradient backgrounds - works well in both themes */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, var(--card) 0%, color-mix(in oklch, var(--card), var(--accent) 3%) 100%);
+  border: 1px solid var(--border);
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Apply dark theme by default - using class name instead of @apply */
+html.dark {
+  /* Dark theme is applied via the .dark class variables above */
+}
